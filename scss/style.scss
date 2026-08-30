@@ -97,6 +97,7 @@ body {
 		border-radius: 0.25rem;
 		color: #60b0d2;
 		cursor: pointer;
+		padding: 5px;
 		transition: $transition;
 		&:hover {
 			background: hsl(205, 78%, 60%);
