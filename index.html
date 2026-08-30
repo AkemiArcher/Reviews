@@ -4,12 +4,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Reviews</title>
 </head>
 
 <body>
-	<main>
+	<main class="container">
 		<section class="reviews">
 			<div class="reviews__header">
 				<h1 class="reviews__title">our reviews</h1>
@@ -22,10 +23,15 @@
 				</div>
 				<h4 class="review__author-name">Sara Jones</h4>
 				<p class="review__author-job">ux designer</p>
-				<p class="review">
+				<p class="review__text">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatum laudantium omnis placeat.
 					Quasi, harum?
 				</p>
+				<div class="review__button-wrapper">
+					<a class="review__chevron-button fas fa-chevron-left"></a>
+					<a class="review__chevron-button fas fa-chevron-right"></a>
+				</div>
+				<button type="button" class="review__rnd-button">surprise me</button>
 			</article>
 		</section>
 	</main>
