@@ -31,10 +31,10 @@ const reviews = [
   },
 ];
 
-const img = document.querySelector<HTMLImageElement>("#author-img")!;
-const author = document.querySelector<HTMLHeadingElement>("#author-name")!;
-const job = document.querySelector<HTMLParagraphElement>("#author-job")!;
-const info = document.querySelector<HTMLParagraphElement>("#review__text")!;
+const img = document.querySelector<HTMLImageElement>("#author-img");
+const author = document.querySelector<HTMLHeadingElement>("#author-name");
+const job = document.querySelector<HTMLParagraphElement>("#author-job");
+const info = document.querySelector<HTMLParagraphElement>("#review__text");
 
 const prevBtn = document.querySelector<HTMLAnchorElement>("#prev-btn");
 const nextBtn = document.querySelector<HTMLAnchorElement>("#next-btn");
@@ -45,7 +45,8 @@ const randomBtn = document.querySelector<HTMLButtonElement>(
 let currentItem: number = 0;
 
 function showPerson(person: number) {
-  const item = reviews[person]!;
+  const item = reviews[person];
+  if (!item || !img || !author || !job || !info) return;
   img.src = item.img;
   author.textContent = item.name;
   job.textContent = item.job;

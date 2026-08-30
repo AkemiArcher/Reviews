@@ -40,6 +40,8 @@ const randomBtn = document.querySelector(".review__rnd-button");
 let currentItem = 0;
 function showPerson(person) {
     const item = reviews[person];
+    if (!item || !img || !author || !job || !info)
+        return;
     img.src = item.img;
     author.textContent = item.name;
     job.textContent = item.job;
