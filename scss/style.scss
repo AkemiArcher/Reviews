@@ -1,7 +1,9 @@
 @import "mixins";
 $primary-font: "Roboto", sans-serif;
 $secondary-font: "Open Sans", sans-serif;
-
+$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+$transition: all 0.3s ease-in-out;
 * {
 	text-transform: capitalize;
 }
@@ -14,10 +16,14 @@ body {
 }
 
 .container {
-	@include min-max(auto, 1240px);
+	@include min-max(auto, 640px);
 }
 
 .reviews {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
 	&__header {
 	}
 
@@ -25,35 +31,77 @@ body {
 	}
 
 	&__header-title-underline {
-		
+		background: #60b0d2;
+		height: 0.25rem;
+		width: 5rem;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	&__item {
+		margin-top: 30px;
 	}
 }
 .review {
+	padding-top: 20px;
+	padding-block: 20px;
+	background-color: white;
+	box-shadow: $light-shadow;
+	transition: $transition;
+	&:hover {
+		box-shadow: $dark-shadow;
+	}
 	&__author-img-wrapper {
+		position: relative;
+		width: 150px;
+		margin: 0 auto;
+		height: 150px;
 	}
 
 	&__author-img {
+		width: 100%;
+		display: block;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 50%;
+		position: relative;
 	}
 
 	&__author-name {
+		letter-spacing: 3px;
 	}
 
 	&__author-job {
+		color: #60b0d2;
+		text-transform: uppercase;
 	}
 
 	&__text {
+		font-weight: 100;
 	}
 
 	&__button-wrapper {
+		display: flex;
+		justify-content: center;
+		gap: 2rem;
+		padding-bottom: 16px;
 	}
 
 	&__chevron-button {
+		cursor: pointer;
 	}
 
 	&__rnd-button {
+		background: transparent;
+		border: 1px solid;
+		border-radius: 0.25rem;
+		color: #60b0d2;
+		cursor: pointer;
+		transition: $transition;
+		&:hover {
+			background: hsl(205, 78%, 60%);
+			color: hsl(205, 100%, 96%);
+		}
 	}
 }
 .fas {
