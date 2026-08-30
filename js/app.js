@@ -46,11 +46,10 @@ function showPerson(person) {
     info.textContent = item.text;
 }
 window.addEventListener("DOMContentLoaded", () => {
-    debugger;
     showPerson(currentItem);
 });
 nextBtn?.addEventListener("click", () => {
-    if (currentItem > reviews.length - 1) {
+    if (currentItem >= reviews.length - 1) {
         currentItem = 0;
     }
     showPerson(currentItem++);
@@ -61,4 +60,5 @@ prevBtn?.addEventListener("click", () => {
     }
     showPerson(currentItem--);
 });
-randomBtn?.addEventListener("click", () => { });
+randomBtn?.addEventListener("click", () => {
+});

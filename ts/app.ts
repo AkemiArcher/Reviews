@@ -53,12 +53,12 @@ function showPerson(person: number) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-	debugger
+  
   showPerson(currentItem);
 });
 
 nextBtn?.addEventListener("click", () => {
-  if (currentItem > reviews.length - 1) {
+  if (currentItem >= reviews.length-1) {
     currentItem = 0;
   }
   showPerson(currentItem++);
@@ -66,10 +66,11 @@ nextBtn?.addEventListener("click", () => {
 
 prevBtn?.addEventListener("click", () => {
   if (currentItem < 0) {
-    currentItem = reviews.length - 1;
+    currentItem = reviews.length-1;
   }
   showPerson(currentItem--);
 });
 
-randomBtn?.addEventListener("click", () => {});
-
+randomBtn?.addEventListener("click", () => {
+	
+});
