@@ -72,5 +72,6 @@ prevBtn?.addEventListener("click", () => {
 });
 
 randomBtn?.addEventListener("click", () => {
-	
+	currentItem = Math.floor(Math.random()*reviews.length);
+	showPerson(currentItem);
 });
