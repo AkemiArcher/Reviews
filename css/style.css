@@ -56,7 +56,7 @@ body h4 {
   display: block;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
   position: relative;
 }
@@ -69,6 +69,8 @@ body h4 {
 }
 .review__text {
   font-weight: 100;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .review__button-wrapper {
   display: flex;
@@ -94,4 +96,4 @@ body h4 {
 .review__rnd-button:hover {
   background: hsl(205, 78%, 60%);
   color: hsl(205, 100%, 96%);
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
