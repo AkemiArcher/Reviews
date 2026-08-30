@@ -1,0 +1,10 @@
+@import "mixins";
+
+* {
+	text-transform: capitalize;
+}
+
+.container {
+	@include min-max(auto, 1240px);
+}
+

@@ -1,0 +1,12 @@
+* {
+  text-transform: capitalize;
+}
+
+.container {
+  min-height: auto;
+  max-width: 1240px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-left: 5px;
+  padding-right: 5px;
+}/*# sourceMappingURL=style.css.map */
