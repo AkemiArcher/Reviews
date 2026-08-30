@@ -4,6 +4,7 @@ $secondary-font: "Open Sans", sans-serif;
 $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 $transition: all 0.3s ease-in-out;
+
 * {
 	text-transform: capitalize;
 }
@@ -90,7 +91,9 @@ body {
 	&__chevron-button {
 		cursor: pointer;
 	}
-
+	&__chevron-button::before {
+		 font-size: 24px;
+	}
 	&__rnd-button {
 		background: transparent;
 		border: 1px solid;

@@ -79,6 +79,9 @@ body h4 {
 .review__chevron-button {
   cursor: pointer;
 }
+.review__chevron-button::before {
+  font-size: 24px;
+}
 .review__rnd-button {
   background: transparent;
   border: 1px solid;
