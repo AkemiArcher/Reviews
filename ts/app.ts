@@ -58,20 +58,24 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 nextBtn?.addEventListener("click", () => {
-  if (currentItem >= reviews.length - 1) {
+  currentItem++;
+  if (currentItem > reviews.length - 1) {
     currentItem = 0;
   }
-  showPerson(currentItem++);
+  showPerson(currentItem);
 });
 
 prevBtn?.addEventListener("click", () => {
+  currentItem--;
   if (currentItem < 0) {
     currentItem = reviews.length - 1;
   }
-  showPerson(currentItem--);
+  showPerson(currentItem);
 });
-
+debugger;
 randomBtn?.addEventListener("click", () => {
-  currentItem = Math.floor(Math.random() * reviews.length);
+  if (reviews.length <= 1) return;
+  const randomIndex = Math.floor(Math.random() * (reviews.length - 1));
+  currentItem = randomIndex >= currentItem ? randomIndex + 1 : randomIndex;
   showPerson(currentItem);
 });
