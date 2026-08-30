@@ -64,7 +64,6 @@ prevBtn?.addEventListener("click", () => {
     }
     showPerson(currentItem);
 });
-debugger;
 randomBtn?.addEventListener("click", () => {
     if (reviews.length <= 1)
         return;
